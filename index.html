@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randall’s Harvest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta property="og:title" content="Randall’s Harvest">
+        <meta property="og:description" content="Randall’s Harvest – Premium Indian Spices & Tea Blends | Fresh, Ethical, Global
+        Discover the finest Indian whole spices, handcrafted masalas, and artisanal tea blends with Randall’s Harvest. Sourced directly from small farmers, packed fresh per order, and delivered worldwide. Pure flavor. Ethical sourcing. Global reach.">
+        <meta property="og:image" content="https://randallsharvest.com/pure-harvest.png">
+        <meta property="og:url" content="https://randallsharvest.com/">
+        <meta property="og:type" content="website">    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Sriracha&display=swap" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            if (window.innerWidth <= 768) {
+                window.location.href = "mobile.html";
+            }
+        </script>    
+        <script>
+            console.log("Desktop Check Running");
+            if (window.innerWidth <= 768) {
+                console.log("Redirecting to mobile.html");
+                window.location.href = "mobile.html";
+            }
+        </script>
+
+</head>
+   <style>
+    @keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.block {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.block.visible {
+    opacity: 1;
+    animation: appear 0.8s ease-out forwards;
+}
+
+   </style>
+<body>
+
+    <div id="root"></div>
+
+    <div id="preloader">
+        <img src="Loading.gif" alt="Loading..." />
+    </div> 
+ 
+
+    <video autoplay loop muted playsinline class="clip">
+        <source src="6(1)(1).mp4" type="video/mp4">
+    </video>
+    <header class="head">
+        <a href="index.html" class="logo">
+            <img src="pure-harvest.png" class="logo">
+        </a>
+         
+        <nav class="navbar">
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li class="dropdown-container">
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a id="spices" href="#">Whole Spices</a></li>  
+                        <li><a id="masalas" href="#">Masalas & Seasonings</a></li>  
+                        <li><a id="tea" href="#">Tea Blends</a></li>  
+                         
+                    </ul>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="support.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        
+
+        <div id="cart-icon">
+            <i class="bx bx-cart"></i>
+            <span class="cart-item-count"></span>
+        </div>     
+    </header>
+     
+  
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Randall’s Harvest – The Pinnacle of Purity & Flavor</h1>
+            <div class="text-box">
+                <h2>The World’s Finest Spices & Teas – Fresh, Authentic, and Unparalleled.</h2>
+                <p>Handpicked from the most fertile lands, ethically sourced from dedicated farmers, and freshly packed upon order—delivering an unparalleled taste experience to every kitchen, café, and connoisseur worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <div class="view">
+        <div class="block">
+    <div class="stack-area"> 
+        <div class="left">
+            <div class="container-glass">
+            <div class="title">Our Products</div>
+            <div class="sub-title">
+                One and only destination for real and original Spices from the finest farms, delivering purity in every spice.
+                <br>"Experience the true essence of flavor, crafted for your kitchen"
+                <br />
+                <button id="see-more-btn">See More </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card">
+                <div class="sub"></div>
+            </div>
+            <div class="card">
+                <div class="sub"></div>
+            </div>
+            <div class="card">
+                <div class="sub"></div>
+            </div>
+            <div class="card">
+                <div class="sub"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="cart">
+        <h2 class="cart-title">Cart</h2>
+        <div class="cart-content">
+
+          <!--  <div class="cart-box">
+                <img src="pickled-stardust-4xc6i5BKPWs-unsplash.jpg" class="cart-image">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Red Chilly</h2>
+                    <span class="cart-price">₹100</span>
+                    <div class="cart-quantity">
+                        
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class='bx bx-trash cart-remove'></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0</div>
+        </div>
+
+        <div class="weight">
+            <div class="total-weight">Total Weight </div>
+            <div class="total-grams"> 0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+    
+ <div class="whole">
+    <div class="view">
+        <div class="block">
+    <div class="main">
+        <div id="card-area">
+            <div class="wrapper">
+                <div class="gc">
+                    <!-- Video Background -->
+                    <video autoplay loop muted playsinline class="background-video">
+                        <source src="5(1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+    
+                    <div class="th"><h2>Whole Spices</h2></div>
+                    <div class="tag">Pure. Bold. Uncompromised.</div>
+                    <div class="p">Handpicked from the finest farms, our whole spices bring unmatched aroma and depth to every dish. From fiery chilies to fragrant cardamom, experience spices in their most authentic and powerful form—pure, fresh, and full of life.</div>
+                
+                    <div class="box-area">
+                        <div class="box">
+                            <img alt="" src="1pic.png">
+                           <h3 class="product-title">Kashmiri Saffron</h3>                  
+                               <div class="overlay">
+    
+                                <p>Savor the rich aroma and golden glow of Kashmiri Saffron — pure, potent, and perfect.</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "4250.50", "250": "5999.50", "500": "9999.50"}'>₹4250.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">150g</option>
+                                <option value="250">250g</option>
+                                <option value="500">500g</option>
+                            </select>
+                        </div>
+                        
+                        <div class="box">
+                            <img alt="" src="black.png">
+                            <h3 class="product-title">Malabar Black Pepper</h3>
+                            <div class="overlay">
+                               
+                                <p>Unleash the bold, fiery kick of Malabar Black Pepper — rich, robust, and full of flavor.</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">150g</option>
+                                <option value="250">250g</option>
+                                <option value="500">500g</option>
+                            </select>
+                        </div>
+                        
+                
+                        <div class="box">
+                            <img alt="" src="carda.png">
+                            <h3 class="product-title">Royal Green Cardamom</h3>
+                            <div class="overlay">
+                               
+                                <p>Royal Green Cardamom — vibrant, aromatic, and bursting with rich flavor in every pod</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="cinna.png">
+                            <h3 class="product-title">Ceylon Cinnamon Sticks</h3> 
+                            <div class="overlay">
+                               
+                                <p>Ceylon Cinnamon Sticks — delicate, sweet, and packed with warm, comforting aroma</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="6pic.png">
+                            <h3 class="product-title">Munnar Cloves</h3>
+                            <div class="overlay">
+                               
+                                <p>Munnar Cloves — bold, aromatic, and bursting with intense flavor</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="7pic.png">
+                            <h3 class="product-title">Star Anise</h3>
+                            <div class="overlay">
+                               
+                                <p>Star Anise — a burst of licorice aroma with a warm, sweet-spicy kick</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="8pic.png">
+                            <h3 class="product-title">Nutmeg & Mace</h3>
+                            <div class="overlay">
+                               
+                                <p>Nutmeg & Mace — rich, warm flavors that add depth and aroma to every dish</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="9pic.png">
+                            <h3 class="product-title">Bay Leaves</h3>
+                            <div class="overlay">
+                               
+                                <p>Bay Leaves — earthy, aromatic notes that elevate your culinary creations</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        <div class="box">
+                            <img alt="" src="10pic.png">
+                            <h3 class="product-title">Dried Ginger Roots</h3>
+                            <div class="overlay">
+                              
+                                <p>Dried Ginger Roots — bold, zesty warmth for vibrant flavors and soothing infusions</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>  <!-- add-cart in css -->
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                          
+                        
+                        <div class="box">
+                            <img alt="" src="11pic.png">
+                            <h3 class="product-title">Long Pepper (Pippali)</h3>
+                            <div class="overlay">
+                                
+                                <p>Long Pepper (Pippali) — a spicy twist with earthy heat and aromatic depth</p>
+                                
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    </div>
+                          
+                    </div>
+                </div> <!-- .gc -->
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+    <div class="whole">
+    <div class="view">
+        <div class="block">
+    <div id="card-area4">
+        <div class="wrapper">
+            <div class="gc3">
+                <video autoplay loop muted playsinline class="background-video3">
+                    <source src="12(1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="th3"><h2>Randall's Tea Blends</h2></div>
+                <div class="tag3">Pure Leaves. Vibrant Flavors. Every Sip, an Experience</div>
+                <div class="p3">No dust, no fillers—just whole-leaf teas infused with nature's finest flavors. From calming hibiscus to refreshing lemon-ginger, each cup is a journey of taste and wellness. Experience tea the way it was meant to be.</div>
+            <div class="box-area">
+                <div class="box">
+                    <img alt="" src="25.png">
+                     <h3 class="product-title">Masala Chai Supreme</h3>
+                    <div class="overlay">
+                        <p>Masala Chai Supreme — a bold blend of spices for a rich, invigorating brew.</p>
+                        
+                        <i class="bx bx-cart add-cart"></i>
+                     </div>
+                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">50g</option>
+                                <option value="250">100g</option>
+                                <option value="500">200g</option>
+                            </select>
+                        </div>
+                        
+                
+                <div class="box">
+                    <img alt="" src="26.png">
+                     <h3 class="product-title2">Kashmiri Kahwa (Saffron Green Tea)</h3>
+                    <div class="overlay">
+                        <p>Kashmiri Kahwa — a saffron-infused delight for warmth and rejuvenation</p>
+                        
+                        <i class="bx bx-cart add-cart"></i>
+                     </div>
+                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">50g</option>
+                                <option value="250">100g</option>
+                                <option value="500">200g</option>
+                            </select>
+                        </div>
+                        
+                <div class="box">
+                    <img alt="" src="27.png">
+                     <h3 class="product-title">Darjeeling First Flush</h3>
+                    <div class="overlay">
+                        <p>Darjeeling First Flush — a delicate brew with floral notes and crisp freshness.</p 
+                            <i class="bx bx-cart add-cart"></i>
+                      </div>
+                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">50g</option>
+                                <option value="250">100g</option>
+                                <option value="500">200g</option>
+                            </select>
+                        </div>
+                        
+                    
+                <div class="box">
+                    <img alt="" src="28.png">
+                     <h3 class="product-title">Earl Grey Bergamot Bliss</h3>
+                    <div class="overlay">
+                        <p>Earl Grey Bergamot Bliss — zesty citrus notes with a soothing black tea base.</p 
+                            <i class="bx bx-cart add-cart"></i>
+                      </div>
+                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">50g</option>
+                                <option value="250">100g</option>
+                                <option value="500">200g</option>
+                            </select>
+                        </div>
+                        
+                    
+                <div class="box">
+                    <img alt="" src="29.png">
+                    <h3 class="product-title">Herbal Tulsi Detox Tea</h3>
+                    <div class="overlay">   
+                        <p>Herbal Tulsi Detox Tea — a refreshing blend for cleansing and rejuvenation</p> 
+                        <i class="bx bx-cart add-cart"></i>
+                     </div>
+                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                            <select class="grams-dropdown">
+                                <option value="150">50g</option>
+                                <option value="250">100g</option>
+                                <option value="500">200g</option>
+                            </select>
+                        </div>     
+                        
+                        <div class="box">
+                            <img alt="" src="30.png">
+                            <h3 class="product-title">Rose & Hibiscus Floral Tea</h3>
+                            <div class="overlay">   
+                                <p>Rose & Hibiscus Floral Tea — a fragrant fusion of elegance and vitality.</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                             </div>
+                                        <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                    <select class="grams-dropdown">
+                                        <option value="150">50g</option>
+                                        <option value="250">100g</option>
+                                        <option value="500">200g</option>
+                                    </select>
+                                </div>   
+                                
+                                <div class="box">
+                                    <img alt="" src="31.png">
+                                    <h3 class="product-title">Chamomile & Lavender Sleep Tea</h3>
+                                    <div class="overlay">   
+                                        <p>Chamomile & Lavender Sleep Tea — calm your senses, drift into serenity.</p> 
+                                        <i class="bx bx-cart add-cart"></i>
+                                     </div>
+                                                <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                            <select class="grams-dropdown">
+                                                <option value="150">50g</option>
+                                                <option value="250">100g</option>
+                                                <option value="500">200g</option>
+                                            </select>
+                                        </div>    
+
+                                        <div class="box">
+                                            <img alt="" src="32.png">
+                                            <h3 class="product-title2">Matcha Green Tea (Ceremonial Grade)</h3>
+                                            <div class="overlay">   
+                                                <p>Matcha Green Tea (Ceremonial Grade) — pure, vibrant, and energizing with every sip.</p> 
+                                                <i class="bx bx-cart add-cart"></i>
+                                             </div>
+                                                        <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                                    <select class="grams-dropdown">
+                                                        <option value="150">50g</option>
+                                                        <option value="250">100g</option>
+                                                        <option value="500">200g</option>
+                                                    </select>
+                                                </div>    
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="whole">
+        <div class="view">
+            <div class="block">
+                <div class="coming-soon">Masalas, Seasonings, and Many More Coming Soon.
+
+        <div id="card-area2" class="hidden-content">
+            <div class="wrapper">
+                <div class="gc2">
+                    <video autoplay loop muted playsinline class="background-video2">
+                        <source src="8(1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="th"><H2>Masalas & Seasonings</H2></div>
+                    <div class="tag2">Flavors That Speak for Themselves</div>
+                    <div class="p2">Masterfully blended for bold taste and rich aroma, our masalas and seasonings transform ordinary meals into unforgettable feasts. Whether it's the warmth of Garam Masala or the zest of Tandoori spice, every blend is crafted for perfection.</div>
+                <div class="box-area">
+                    <div class="box">
+                        <img alt="" src="12pic.png">
+                        <h3 class="product-title">Red Chilly Powder</h3>
+                        <div class="overlay">
+        
+                          <p>Ignite your taste buds with the purest, most vibrant Red Chilly Powder for an intense flavor kick</p> 
+                            
+                            <i class="bx bx-cart add-cart"></i>
+                        </div>
+                        <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                    <select class="grams-dropdown">
+                        <option value="150">150g</option>
+                        <option value="250">250g</option>
+                        <option value="500">500g</option>
+                    </select>
+                </div>
+                
+                    <div class="box">
+                        <img alt="" src="13pic.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                    <div class="box">
+                        <img alt="" src="14pic.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                      <div class="box">
+                        <img alt="" src="15pic.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                    <div class="box">
+                        <img alt="" src="16pic.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                    <div class="box">
+                        <img alt="" src="17.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                            </div>
+                            <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                        <select class="grams-dropdown">
+                            <option value="150">150g</option>
+                            <option value="250">250g</option>
+                            <option value="500">500g</option>
+                        </select>
+                    </div>
+                    
+                    <div class="box">
+                        <img alt="" src="18.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="19.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="20.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="21.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="22.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="23.png">
+                        <h3 class="product-title">Black Pepper</h3>
+                        <div class="overlay">
+                            <p>Unleash the bold, aromatic kick of Black Pepper for a rich, zesty punch that elevates every dish</p> 
+                                <i class="bx bx-cart add-cart"></i>
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                            
+                    <div class="box">
+                        <img alt="" src="24.png">
+                        <h3 class="product-title">Turmeric Powder</h3>
+                        <div class="overlay">               
+                            <p>Unlock the golden essence of purity with our finest Turmeric Powder for rich color and bold flavor</p>  
+                            <i class="bx bx-cart add-cart"></i><!--<button id="ex-more-btn">Explore More </button>-->
+                         </div>
+                                    <span class="price" data-prices='{"150": "3500.50", "250": "5200.00", "500": "7800.00"}'>₹3500.50</span>
+                                <select class="grams-dropdown">
+                                    <option value="150">150g</option>
+                                    <option value="250">250g</option>
+                                    <option value="500">500g</option>
+                                </select>
+                            </div>
+                </div>
+            </div>
+        </div>  
+        </div>
+                </div>
+    </div>
+        </div>
+        </div>
+
+    <div class="view">
+        <div class="block">
+    <div class=" v">
+        <h3 class="container-class2">COUNTRIES THAT WE DELIVER</h3>
+       <div class="slider2">
+         <div class="slider2-track">
+ 
+          
+            <div class="slide2"><img src="dubai-in-the-united-arab-emirates-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="flag-of-united-kingdom-grunge-abstract-brush-stroke-on-gray-background-vector.jpg"></div>
+         
+            <div class="slide2"><img src="360_F_338927647_uLuqmJsNQAG7BKEtOSOdzGHGYAdzyRRi.jpg"></div>
+            <div class="slide2"><img src="dubai-in-the-united-arab-emirates-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+           
+           
+            <div class="slide2"><img src="flag-of-united-kingdom-grunge-abstract-brush-stroke-on-gray-background-vector.jpg"></div>
+            <div class="slide2"><img src="360_F_338927647_uLuqmJsNQAG7BKEtOSOdzGHGYAdzyRRi.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            
+            <div class="slide2"><img src="dubai-in-the-united-arab-emirates-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="flag-of-united-kingdom-grunge-abstract-brush-stroke-on-gray-background-vector.jpg"></div>
+         
+            <div class="slide2"><img src="360_F_338927647_uLuqmJsNQAG7BKEtOSOdzGHGYAdzyRRi.jpg"></div>
+            <div class="slide2"><img src="dubai-in-the-united-arab-emirates-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+           
+           
+            <div class="slide2"><img src="flag-of-united-kingdom-grunge-abstract-brush-stroke-on-gray-background-vector.jpg"></div>
+            <div class="slide2"><img src="360_F_338927647_uLuqmJsNQAG7BKEtOSOdzGHGYAdzyRRi.jpg"></div>
+            <div class="slide2"><img src="australia-emblem-the-design-features-a-geometric-style-illustration-with-bold-typography-in-a-modern-font-the-graphic-slogan-lettering-vector.jpg"></div>
+
+         </div>
+        
+       </div>
+
+     </div>
+        </div>
+    </div>
+   
+     <section class="grid grid-3">
+        <div class="autoBLur">AUTHENTIC & REAL</div>
+        <div class="autoBLur">PURE INGREDIENTS</div>
+        <div class="autoBLur">RICH FLAVORS</div>
+        <div class="autoBLur">HANDPICKED SPICES</div>
+        <div class="autoBLur"  id="shop-more-btn">SHOP MORE &#8599;</div>
+    </section>
+ <!--for dynamic pricing purposes and grams-->
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".grams-dropdown").forEach(dropdown => {
+        dropdown.addEventListener("change", function () {
+            const box = this.closest(".box");
+            const priceElement = box.querySelector(".price");
+            const prices = JSON.parse(priceElement.getAttribute("data-prices"));
+            const selectedValue = this.value;
+
+            if (prices[selectedValue]) {
+                priceElement.textContent = `₹${prices[selectedValue]}`;
+            }
+        });
+    });
+});
+
+   </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const blocks = document.querySelectorAll(".block");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible"); // Remove when out of view
+            }
+        });
+    }, { threshold: 0.3 });
+
+    blocks.forEach((block) => {
+        observer.observe(block);
+    });
+});
+</script>
+
+    <script>
+        document.getElementById("shop-more-btn").addEventListener("click", function () {
+            document.getElementById("card-area").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+    <script>
+       
+   document.addEventListener("DOMContentLoaded", function () {
+    function smoothScroll(id, target) {
+        document.getElementById(id).addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+        });
+    }
+
+    smoothScroll("spices", "card-area");
+    smoothScroll("masalas", "card-area2");
+    smoothScroll("tea", "card-area4");
+    });
+    </script>
+  
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  let elements = document.querySelectorAll(".autoBLur");
+
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.filter = "blur(0px)";
+          entry.target.style.transition = "filter 0.8s ease";
+        } else {
+          entry.target.style.filter = "blur(40px)";
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
+
+</script>
+
+     <footer>
+        <ul class="social-footer">
+          <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+          <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+     
+        <ul class="menu">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="index.html">Shop</a></li>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="support.html">Contact Us</a></li>
+        </ul>  
+        <p>&#169 2025 Randall's Harverset | ALL RIGHTS RESERVED jithu</p>
+      </footer>
+  
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+       const menuButton = document.querySelector(".menu-button");
+       const navbar = document.querySelector(".navbar");
+       const cartIcons = document.querySelectorAll(".add-cart"); // Select all cart icons in product cards
+   
+       // Check if menuButton and navbar exist before adding event listener
+       if (menuButton && navbar) {
+           menuButton.addEventListener("click", function () {
+               navbar.classList.toggle("open");
+               console.log("Menu clicked! Navbar class:", navbar.classList);
+           });
+       } else {
+           console.error("Menu button or navbar not found!");
+       }
+   
+       // Function to check if the device is mobile
+       function isMobile() {
+           return window.innerWidth <= 768;
+       }
+   
+       // Razorpay Checkout Function
+       function initiatePayment(price, productName) {
+           var options = {
+               "key": "rzp_test_k8WUCdQR2VpySY", // Replace with your Razorpay Key
+               "amount": price * 100, // Convert ₹ to paise
+               "currency": "INR",
+               "name": "Randall's Harvest",
+               "description": productName,
+               "image": "your_logo_url", // Replace with logo URL
+               "handler": function (response) {
+                   alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+               },
+               "prefill": {
+                   "name": "Customer Name",
+                   "email": "customer@example.com",
+                   "contact": "9999999999"
+               },
+               "theme": {
+                   "color": "#F37254"
+               }
+           };
+   
+           var rzp1 = new Razorpay(options);
+           rzp1.open();
+       }
+   
+       // Add Event Listener to Each Cart Icon
+       cartIcons.forEach(cartIcon => {
+           cartIcon.addEventListener("click", function (event) {
+               if (this.id === "cart-icon") return;
+   
+               if (isMobile()) { // Only trigger on mobile
+                   const productCard = this.closest(".overlay");
+                   if (!productCard) return;
+   
+                   const priceText = productCard.querySelector(".price")?.innerText.replace("₹", "").trim();
+                   const productName = productCard.querySelector(".product-title")?.innerText.trim();
+   
+                   if (!priceText || !productName) return;
+   
+                   const price = parseFloat(priceText);
+                   if (isNaN(price)) return;
+   
+                   initiatePayment(price, productName);
+   
+                   event.preventDefault();
+                   event.stopPropagation();
+               }
+           });
+       });
+   });
+   
+       </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    function isDesktop() {
+        return window.innerWidth >= 1024; // Adjust breakpoint as needed
+    }
+
+    if (!isDesktop()) {
+        showPopup();
+    }
+
+    function showPopup() {
+        const popup = document.createElement("div");
+        popup.innerHTML = `
+            <div class="popup-overlay">
+                <div class="popup-content">
+                    <p>For the best experience, please view this site on a desktop. Our design and features are optimized for larger screens to ensure smooth navigation and the highest quality experience.</p>
+                    <button id="close-popup">OK</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(popup);
+
+        document.getElementById("close-popup").addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+    }
+});
+
+</script>
+
+
+<script>
+    setTimeout(function () {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        preloader.style.display = "none";
+    }
+}, 8000); // Adjust the time as needed
+
+</script>
+
+<script>
+    document.getElementById("see-more-btn").addEventListener("click", function () {
+    document.getElementById("card-area").scrollIntoView({ behavior: "smooth" });
+});
+
+</script>
+
+<script>
+    document.getElementById("ex-more-btn").addEventListener("click", function () {
+        document.getElementById("card-area4").scrollIntoView({ behavior: "smooth"});
+    });
+</script>
+
+    <script src="cart.js"></script>
+    <script src="card.js"></script>
+</body>
+</html>

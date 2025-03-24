@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: myFont;
+  src: url(Kugile_Demo.ttf);
+}
+@font-face {
+  font-family: myFont2;
+  src: url(VioletSans-Regular.ttf);
+}
+body {
+    font-family: myFont;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.head h1 {
+    color: black;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-95%);
+    position: absolute; 
+}
+
+.head h1 a {
+    color: black;
+    text-decoration: none
+}
+
+.logo {
+    height: 160px;
+    width: 180px;
+    margin-top: -10px;
+    margin-left: -50px;
+    padding:  .25px;
+    border-radius: 20px;
+}
+
+.head {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 25px 9%;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: black;
+}
+
+.navbar {
+    
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 18%;
+    gap: 80px;
+  }
+  
+  .navbar ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;   
+  }
+  
+  .navbar a {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      transition: .3s;
+      padding: 20px;
+  }
+  
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .navbar ul li a {
+    font-size: 22px;
+    font-family: myFont2;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+     
+  .navbar a:hover {
+    color: saddlebrown;
+   }
+
+   .container {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInContent 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-family: myFont2;
+    font-size: 45px;
+    font-weight: 1200;
+}
+
+p {
+    font-family: myFont2;
+    font-size: 27px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+
+.clip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;  
+  }
+
+footer {
+    top: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 195px;
+    position:relative;
+    width: 100%;
+    background: black;
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+  
+  
+  footer .social-footer,
+  footer .menu {                /* can be used to reduce the number of line and if two things have same values */
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 10px 0;   
+     flex-wrap: wrap;
+    padding-right: 70px;
+  }
+  
+  footer .social-footer li,
+  footer .menu li {
+    list-style: none; /* remove any style of the list like dots or numbers */
+  }
+  
+  footer .social-footer li a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block; /*adds space between */
+    transition: 0.5s;
+  }
+  
+  footer .social-footer li a:hover {
+    transform: translateY(-5px);
+  }
+  
+  footer .menu li a {
+    font-family: myFont2;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block; /*adds space between */
+    text-decoration: none;
+    opacity: 0.75;
+  }
+  
+  footer .menu li a:hover {
+    opacity: 1;
+  }
+  
+  footer p {
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: myFont;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-footer {
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+  .fade-in{
+    display: none;
+  } 
+
+.navbar li:nth-child(1) {
+ margin-left: 57px;
+}
+
+
+  .logo {
+    width: 90px;
+    height: 80px;
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+
+  .navbar li:nth-child(3){
+    display: none;
+  }
+
+  .navbar li:nth-child(1) {
+    display: none; /* Moves "Our Story" to the last position */
+  }
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white; /* Or any background you prefer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it's on top */
+}

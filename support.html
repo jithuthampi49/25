@@ -1,0 +1,233 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Randall’s Harvest</title>
+        <meta property="og:title" content="Randall’s Harvest">
+        <meta property="og:description" content="Randall’s Harvest – Premium Indian Spices & Tea Blends | Fresh, Ethical, Global
+        Discover the finest Indian whole spices, handcrafted masalas, and artisanal tea blends with Randall’s Harvest. Sourced directly from small farmers, packed fresh per order, and delivered worldwide. Pure flavor. Ethical sourcing. Global reach.">
+        <meta property="og:image" content="https://randallsharvest.com/pure-harvest.png">
+        <meta property="og:url" content="https://randallsharvest.com/">
+        <meta property="og:type" content="website">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="support.css">
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </head>
+<body>
+     
+    <video autoplay loop muted playsinline class="clip">
+        <source src="6(1)(1).mp4" type="video/mp4">
+    </video>     
+        <header class="head">
+            <a href="index.html" class="logo">
+                <img src="pure-harvest.png" class="logo">
+            </a>
+             
+            <nav class="navbar">
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li class="dropdown-container">
+                        <a href="index.html">Shop</a>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="support.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    
+            <div id="cart-icon">
+                <i class="bx bx-cart"></i>
+                <span class="cart-item-count"></span>
+            </div>  
+        </header>
+
+        
+        <div class="cart">
+            <h2 class="cart-title">Cart</h2>
+            <div class="cart-content">
+    
+              <!--  <div class="cart-box">
+                    <img src="pickled-stardust-4xc6i5BKPWs-unsplash.jpg" class="cart-image">
+                    <div class="cart-detail">
+                        <h2 class="cart-product-title">Red Chilly</h2>
+                        <span class="cart-price">₹100</span>
+                        <div class="cart-quantity">
+                            
+                            <button id="decrement">-</button>
+                            <span class="number">1</span>
+                            <button id="increment">+</button>
+                        </div>
+                    </div>
+                    <i class='bx bx-trash cart-remove'></i>
+                </div> -->
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0</div>
+            </div>
+    
+            <div class="weight">
+                <div class="total-weight">Total Weight </div>
+                <div class="total-grams"> 0</div>
+            </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class='bx bx-x' id="cart-close"></i>
+        </div>
+    
+    
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-center">
+          <div class="contact-center-title">
+            <h1 class="contact-heading">Got Issues?</h1>
+            <h2>Get in touch</h2>
+          </div>
+          <input type="hidden" name="access_key" value="2210c382-e7a1-4afd-a799-b86439ee632e">
+          <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+          <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
+          <textarea name="message" placeholder="Your Message" class="contact-input"></textarea>
+          <button type="submit"><i class='bx bxs-send'></i> Send</button>
+        </form>  
+      </div>
+      
+    <footer>
+        <ul class="social-footer">
+          <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+          <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+     
+        <ul class="menu">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="index.html">Shop</a></li>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="support.html">Contact Us</a></li>
+        </ul>  
+        <p>&#169 2025 Randall's Harverset | ALL RIGHTS RESERVED jithu</p>
+      </footer>
+
+    <video autoplay loop muted playsinline class="clip">
+        <source src="6.mp4" type="video/mp4">
+
+      
+   
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+           const menuButton = document.querySelector(".menu-button");
+           const navbar = document.querySelector(".navbar");
+           const cartIcons = document.querySelectorAll(".add-cart"); // Select all cart icons in product cards
+       
+           // Check if menuButton and navbar exist before adding event listener
+           if (menuButton && navbar) {
+               menuButton.addEventListener("click", function () {
+                   navbar.classList.toggle("open");
+                   console.log("Menu clicked! Navbar class:", navbar.classList);
+               });
+           } else {
+               console.error("Menu button or navbar not found!");
+           }
+       
+           // Function to check if the device is mobile
+           function isMobile() {
+               return window.innerWidth <= 768;
+           }
+       
+           // Razorpay Checkout Function
+           function initiatePayment(price, productName) {
+               var options = {
+                   "key": "your_razorpay_key", // Replace with your Razorpay Key
+                   "amount": price * 100, // Convert ₹ to paise
+                   "currency": "INR",
+                   "name": "Your Business Name",
+                   "description": productName,
+                   "image": "your_logo_url", // Replace with logo URL
+                   "handler": function (response) {
+                       alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                   },
+                   "prefill": {
+                       "name": "Customer Name",
+                       "email": "customer@example.com",
+                       "contact": "9999999999"
+                   },
+                   "theme": {
+                       "color": "#F37254"
+                   }
+               };
+       
+               var rzp1 = new Razorpay(options);
+               rzp1.open();
+           }
+       
+           // Add Event Listener to Each Cart Icon
+           cartIcons.forEach(cartIcon => {
+               cartIcon.addEventListener("click", function (event) {
+                   if (this.id === "cart-icon") return;
+       
+                   if (isMobile()) { // Only trigger on mobile
+                       const productCard = this.closest(".overlay");
+                       if (!productCard) return;
+       
+                       const priceText = productCard.querySelector(".price")?.innerText.replace("₹", "").trim();
+                       const productName = productCard.querySelector(".product-title")?.innerText.trim();
+       
+                       if (!priceText || !productName) return;
+       
+                       const price = parseFloat(priceText);
+                       if (isNaN(price)) return;
+       
+                       initiatePayment(price, productName);
+       
+                       event.preventDefault();
+                       event.stopPropagation();
+                   }
+               });
+           });
+       });
+       
+           </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        function isDesktop() {
+            return window.innerWidth >= 1024; // Adjust breakpoint as needed
+        }
+    
+        if (!isDesktop()) {
+            showPopup();
+        }
+    
+        function showPopup() {
+            const popup = document.createElement("div");
+            popup.innerHTML = `
+                <div class="popup-overlay">
+                    <div class="popup-content">
+                        <p>For the best experience, please view this site on a desktop. Our design and features are optimized for larger screens to ensure smooth navigation and the highest quality experience.</p>
+                        <button id="close-popup">OK</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(popup);
+    
+            document.getElementById("close-popup").addEventListener("click", function () {
+                popup.style.display = "none";
+            });
+        }
+    });
+    
+    </script>
+    
+    <script>
+        document.getElementById("see-more-btn").addEventListener("click", function () {
+        document.getElementById("card-area").scrollIntoView({ behavior: "smooth" });
+    });
+    
+    </script>
+    
+    <script>
+        document.getElementById("ex-more-btn").addEventListener("click", function () {
+            document.getElementById("card-area4").scrollIntoView({ behavior: "smooth"});
+        });
+    </script>
+
+    <script src="cart.js"></script>
+</body>
+</html>
